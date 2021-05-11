@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <style>
        body{
-           background-image: url(lab.jpg);
+           background-image: url(ressources/lab.jpg);
        } 
 
        .form{

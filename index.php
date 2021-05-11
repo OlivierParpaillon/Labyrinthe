@@ -23,7 +23,7 @@
 <body> 
 
     <?php       //Ouvrir un fichier
-        $file = fopen('labyrinthe.txt', 'r+');
+        $file = fopen('ressources/labyrinthe.txt', 'r+');
 
         $tablab = [];
         while(!feof($file))  {
