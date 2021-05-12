@@ -40,13 +40,15 @@ $user = getUser($mysqli, $_POST['pseudo']);
 if ( is_null($user)) {
     $user = insertUser($mysqli, $_POST["pseudo"]);
 }
-echo($user);
+echo"<p class='user'>Bienvenue ".($user)."</p>";
 ?>
 
 <head>
     <title>Jeu du labyrinthe</title>
     <meta charset="utf-8">
     <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
 <body> 
@@ -79,13 +81,21 @@ echo($user);
         <?php endforeach; ?>    
     </table>
     </div>
-
-    <div class="btn">
-        <button type="button" class="up"><img src=ressources/Ufleche.jpg></button>
-        <button type="button" class="left"><img src=ressources/Lfleche.jpg></button>
-        <button type="button" class="right"><img src=ressources/Rfleche.jpg></button>
-        <button type="button" class="down"><img src=ressources/Dfleche.jpg></button>
-    </div>
+        
+    <section class="btn">
+        <div class="up">
+            <button type="button"><img src=ressources/Ufleche.jpg></button>
+        </div>
+        <div class="left">
+            <button type="button"><img src=ressources/Lfleche.jpg></button>
+        </div>
+        <div class="right">
+            <button type="button"><img src=ressources/Rfleche.jpg></button>
+        </div>
+        <div class="down">
+            <button type="button"><img src=ressources/Dfleche.jpg></button>
+        </div>
+    </section>
 
 </body> 
 
