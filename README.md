@@ -5,7 +5,7 @@ Travail réalisé par Parpaillon Olivier.
 ## Présentation
 
 Bienvenue dans mon jeu du labyrinthe fait à 100% en PHP
-Le but est très simple, réussir à sortir du labyrinthe à l'aide des commandes données :
+Le but est très simple, réussir à sortir du labyrinthe à l'aide des déplacements :
 
 - Gauche
 - Droite
