@@ -97,6 +97,14 @@ echo"<p class='user'>Bienvenue ".($user)."</p>";
         </div>
     </section>
 
+        <!-- formulaire pseudo -->   
+        <form class="rename"action="game.php" method="post"> 
+        <div>
+            <input type="text" name="pseudo">
+            <button type="submit" name="nickname">Changer de surnom</button>
+        </div>
+    </form>
+
 </body> 
 
 </html>

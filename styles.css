@@ -1,5 +1,6 @@
 body {
     font-family: 'Bebas Neue', cursive;
+    background-color: #444444;
 }
 
 .mur {
@@ -16,8 +17,8 @@ td {
 }
 
 .centre {
-    margin-left: 40em;
-    margin-top: 12em;
+    margin-left: 43em;
+    margin-top: 5em;
 }
 
 .right {
@@ -48,6 +49,7 @@ td {
     border: none;
     cursor: pointer;
     outline: none;
+    text-align: right;
 }
 
 img {
@@ -62,4 +64,9 @@ img {
 .user {
     font-size: x-large;
     font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+
+.rename {
+    text-align: right;
 }
