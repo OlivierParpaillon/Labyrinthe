@@ -1,0 +1,58 @@
+.mur {
+    background-color: black;
+}
+
+.chemin {
+    background-color: antiquewhite;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+}
+
+.centre {
+    margin-left: 40em;
+    margin-top: 12em;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-start;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.left {
+    display: flex;
+    justify-content: flex-start;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.up {
+    display: flex;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.down {
+    display: flex;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}

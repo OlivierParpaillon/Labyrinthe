@@ -46,26 +46,7 @@ echo($user);
 <head>
     <title>Jeu du labyrinthe</title>
     <meta charset="utf-8">
-    <style>
-        .mur {
-            background-color: black;
-        }
-
-        .chemin {
-            background-color: antiquewhite;
-        }
-
-        td {
-            width: 30px;
-            height: 30px;
-
-        }
-
-        .centre {
-            margin-left: 40em;
-            margin-top: 12em;
-        }
-    </style>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body> 
@@ -81,7 +62,7 @@ echo($user);
         }     
         fclose($file);
     ?>
-<div class="centre">
+    <div class="centre">
     <table> <!-- lire un fichier -->
         <?php foreach( $tablab as $ligne) :?>
             <tr>
@@ -98,6 +79,14 @@ echo($user);
         <?php endforeach; ?>    
     </table>
     </div>
+
+    <div class="btn">
+        <button type="button" class="up"><img src=ressources/Ufleche.jpg></button>
+        <button type="button" class="left"><img src=ressources/Lfleche.jpg></button>
+        <button type="button" class="right"><img src=ressources/Rfleche.jpg></button>
+        <button type="button" class="down"><img src=ressources/Dfleche.jpg></button>
+    </div>
+
 </body> 
 
 </html>
