@@ -75,6 +75,9 @@ echo"<p class='user'>Bienvenue ".($user)."</p>";
                     <?php if ($case == 1) :?>
                         <td class="chemin">
                     <?php endif; ?>
+                    <?php if ($case == 2) :?>
+                        <td class="player">
+                    <?php endif; ?>
                     </td>
                 <?php endforeach; ?>
             </tr>

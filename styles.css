@@ -11,6 +11,12 @@ body {
     background-color: antiquewhite;
 }
 
+.player {
+    background-image: url(ressources/player.png);
+    width: auto;
+    height: auto;
+}
+
 td {
     width: 30px;
     height: 30px;
