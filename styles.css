@@ -17,6 +17,14 @@ body {
     height: auto;
 }
 
+.start {
+    background-color: green;
+}
+
+.end {
+    background-color: red;
+}
+
 td {
     width: 30px;
     height: 30px;

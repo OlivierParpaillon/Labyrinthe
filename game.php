@@ -37,8 +37,8 @@ function getUser($mysqli, $user) {      //affichage du user sur l'ecran
 
 $user = getUser($mysqli, $_POST['pseudo']);
 
-if ( is_null($user)) {
-    $user = insertUser($mysqli, $_POST["pseudo"]);
+if ( is_null($_POST) && empty($_POST) ) {
+    insertUser($mysqli, $_POST["pseudo"]);
 }
 echo"<p class='user'>Bienvenue ".($user)."</p>";
 ?>
@@ -78,13 +78,20 @@ echo"<p class='user'>Bienvenue ".($user)."</p>";
                     <?php if ($case == 2) :?>
                         <td class="player">
                     <?php endif; ?>
+                    <?php if ($case == 3) :?>
+                        <td class="start">
+                    <?php endif; ?>
+                    <?php if ($case == 4) :?>
+                        <td class="end">
+                    <?php endif; ?>
                     </td>
                 <?php endforeach; ?>
             </tr>
         <?php endforeach; ?>    
     </table>
     </div>
-        
+
+    <!-- Affichage bouton haut/bas/gauche/droite -->   
     <section class="btn">
         <div class="up">
             <button type="button"><img src=ressources/Ufleche.jpg></button>
@@ -100,12 +107,10 @@ echo"<p class='user'>Bienvenue ".($user)."</p>";
         </div>
     </section>
 
-        <!-- formulaire pseudo -->   
-        <form class="rename"action="game.php" method="post"> 
-        <div>
+    <!-- formulaire pseudo -->   
+    <form class="rename"action="game.php" method="post"> 
             <input type="text" name="pseudo">
             <button type="submit" name="nickname">Changer de surnom</button>
-        </div>
     </form>
 
 </body> 
