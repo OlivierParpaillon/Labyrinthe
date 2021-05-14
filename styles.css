@@ -3,6 +3,9 @@ body {
     background-color: #444444;
 }
 
+
+/* Labryinthe */
+
 .mur {
     background-color: black;
 }
@@ -34,6 +37,9 @@ td {
     margin-left: 43em;
     margin-top: 5em;
 }
+
+
+/* Boutton */
 
 .right {
     display: flex;
@@ -75,11 +81,17 @@ img {
     display: flex;
 }
 
+
+/* Afficahge du pseudo */
+
 .user {
     font-size: x-large;
     font-family: 'Bebas Neue', cursive;
     text-align: center;
 }
+
+
+/* boutton rename */
 
 .rename {
     text-align: right;

@@ -53,7 +53,7 @@ echo"<p class='user'>Bienvenue ".($user)."</p>";
 
 <body> 
 
-    <?php       //Ouvrir un fichier
+    <?php       //Ouvrir et lire le fichier labyrinthe
         $file = fopen('ressources/labyrinthe.txt', 'r+');
 
         $tablab = [];
@@ -65,7 +65,7 @@ echo"<p class='user'>Bienvenue ".($user)."</p>";
         fclose($file);
     ?>
     <div class="centre">
-    <table> <!-- lire un fichier -->
+    <table> <!-- afficher le fichier labyrinthe -->
         <?php foreach( $tablab as $ligne) :?>
             <tr>
                 <?php foreach( $ligne as $case) :?>
