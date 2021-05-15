@@ -14,15 +14,14 @@ Le but est très simple, réussir à sortir du labyrinthe à l'aide des déplace
 
 ## to do list
 HTML/CSS
-=
+-
 - [x] Affichage labyrinthe
 - [x] Affichage personnage
 - [x] Affichage bouton de déplacement
 - [x] Affichage pseudo
 
 PHP
-=
-
+-
 - [x] Liaison pseudo à la BDD
 - [ ] Bouton de déplacement fonctionnel
 - [ ] Système de victoire
@@ -30,7 +29,6 @@ PHP
 - [x] Système de restart
 
 Bonus
-=
-
+-
 - [ ] Sauvegarde de la poistion du personnage
 - [ ] Différents niveaux de labyrinthe
