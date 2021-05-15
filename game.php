@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<?php   //connection à la BDD
-$mysqli = new mysqli("localhost:3306", "phptest", "phptest", "labyrinthe");
+    <?php   //connection à la BDD
+    $mysqli = new mysqli("localhost:3306", "phptest", "phptest", "labyrinthe");
 
-if ($mysqli->connect_errno) {
-    printf("Échec de la connexion : %s\n", $mysqli->connect_error);
-    exit();
-}
-
-$mysqli -> query("USE labyrinte");
-function insertUser($mysqli, $user) {       //Creation du user
-    $sql = "INSERT INTO utilisateurs (nom) VALUES ('".$user."')";
-        
-    if ($mysqli->query($sql) === TRUE) {
-    return $user;
-    } else {
-    echo "Error: " . $sql . "<br>" . $mysqli->error;
+    if ($mysqli->connect_errno) {
+        printf("Échec de la connexion : %s\n", $mysqli->connect_error);
+        exit();
     }
-}
 
-function getUser($mysqli, $user) {      //affichage du user sur l'ecran
-	$data = [];
-	if ($result = $mysqli->query("SELECT * FROM utilisateurs WHERE nom = '".$user."'")) {
-		while ($row = $result->fetch_assoc()) {
-			$data[] = $row["nom"];
-		}
-	    $result->close();
-        if (count($data) === 0) {
-            return NULL;
-        }else {
-            return $data[0];
+    function insertUser($mysqli, $user) {       //Creation du user
+        $sql = "INSERT INTO utilisateurs (nom) VALUES ('".$user."')";
+            
+        if ($mysqli->query($sql) === TRUE) {
+        return $user;
+        } else {
+        echo "Error: " . $sql . "<br>" . $mysqli->error;
         }
-	}
-}
+    }
 
-$user = getUser($mysqli, $_POST['pseudo']);
+    function getUser($mysqli, $user) {      //recuperation du user pour l'affichage sur l'ecran
+        $data = [];
+        if ($result = $mysqli->query("SELECT * FROM utilisateurs WHERE nom = '".$user."'")) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row["nom"];
+            }
+            $result->close();
+            if (count($data) === 0) {
+                return NULL;
+            }else {
+                return $data[0];
+            }
+        }
+    }
 
-if ( is_null($_POST) && empty($_POST) ) {
-    insertUser($mysqli, $_POST["pseudo"]);
-}
-echo"<p class='user'>Bienvenue ".($user)."</p>";
-?>
+    $user = getUser($mysqli, $_POST["pseudo"]);
+
+    if ( !is_null($_POST) && !empty($_POST) ) {
+        insertUser($mysqli, $_POST["pseudo"]);
+    }
+    echo"<p class='user'>Bienvenue ".($_POST["pseudo"])."</p>";
+    ?>
 
 <head>
     <title>Jeu du labyrinthe</title>
@@ -92,22 +91,20 @@ echo"<p class='user'>Bienvenue ".($user)."</p>";
     </div>
 
     <!-- Affichage bouton haut/bas/gauche/droite -->   
-    <section class="btn">
-        <div class="up">
-            <button type="button"><img src=ressources/Ufleche.jpg></button>
-        </div>
-        <div class="left">
-            <button type="button"><img src=ressources/Lfleche.jpg></button>
-        </div>
-        <div class="right">
-            <button type="button"><img src=ressources/Rfleche.jpg></button>
-        </div>
-        <div class="down">
-            <button type="button"><img src=ressources/Dfleche.jpg></button>
-        </div>
-    </section>
+    <form method="post">
+        <div class="placement"> <button type="submit" name="up"><img src="ressources/Ufleche.jpg"></button></div>
+        <button type="submit" name="left"><img src="ressources/Lfleche.jpg"></button>
+        <button type="submit" name="down"><img src ="ressources/Dfleche.jpg"></button>
+        <button type="submit" name="right"><img src="ressources/Rfleche.jpg"></button>
+    </form>
 
-    <!-- formulaire pseudo -->   
+
+
+    <div class="restart">
+        <button type="submit"><a href="index.php">Recommencer</a></button>
+    </div>
+    
+    <!-- formulaire pseudo    -->
     <form class="rename"action="game.php" method="post"> 
             <input type="text" name="pseudo">
             <button type="submit" name="nickname">Changer de surnom</button>

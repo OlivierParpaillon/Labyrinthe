@@ -4,7 +4,7 @@ body {
 }
 
 
-/* Labryinthe */
+/* Affichage labryinthe */
 
 .mur {
     background-color: black;
@@ -39,46 +39,34 @@ td {
 }
 
 
-/* Boutton */
-
-.right {
-    display: flex;
-    justify-content: flex-start;
-    border: none;
-    cursor: pointer;
-    outline: none;
-}
-
-.left {
-    display: flex;
-    justify-content: flex-start;
-    border: none;
-    cursor: pointer;
-    outline: none;
-}
-
-.up {
-    display: flex;
-    border: none;
-    cursor: pointer;
-    outline: none;
-}
-
-.down {
-    display: flex;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    text-align: right;
-}
+/* Boutton haut/bas/gauche/droite */
 
 img {
     width: 80px;
     height: 80px;
 }
 
-.btn {
-    display: flex;
+.placement {
+    margin-left: 99px;
+}
+
+
+/* bouton rename */
+
+.rename {
+    text-align: right;
+}
+
+
+/* bouton restart */
+
+.restart {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -88,11 +76,4 @@ img {
     font-size: x-large;
     font-family: 'Bebas Neue', cursive;
     text-align: center;
-}
-
-
-/* boutton rename */
-
-.rename {
-    text-align: right;
 }
