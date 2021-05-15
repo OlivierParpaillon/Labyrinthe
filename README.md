@@ -29,3 +29,7 @@ Le but est très simple, réussir à sortir du labyrinthe à l'aide des déplace
 ### Bonus
 - [ ] Sauvegarde de la poistion du personnage
 - [ ] Différents niveaux de labyrinthe
+
+#### Problème à régler
+
+Pseudo perdu une fois qu'on appui sur un bouton.

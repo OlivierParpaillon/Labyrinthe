@@ -21,9 +21,11 @@ if ($mysqli->connect_errno) {
        } 
 
        .form{
-           margin: 0 auto;
-           padding: 150px;
-           width: 280px;
+            margin: 0 auto;
+            padding: 150px;
+            width: 280px;
+            text-align: center;
+            text-justify: inter-word;
        }
 
     </style>
