@@ -19,14 +19,18 @@ HTML/CSS
 - [x] Affichage personnage
 - [x] Affichage bouton de déplacement
 - [x] Affichage pseudo
+
 PHP
-= 
+=
+
 - [x] Liaison pseudo à la BDD
 - [ ] Bouton de déplacement fonctionnel
 - [ ] Système de victoire
 - [x] Système de rename
 - [x] Système de restart
+
 Bonus
 =
+
 - [ ] Sauvegarde de la poistion du personnage
 - [ ] Différents niveaux de labyrinthe
