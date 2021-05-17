@@ -7,10 +7,10 @@ Travail réalisé par Parpaillon Olivier.
 Bienvenue dans mon jeu du labyrinthe fait en PHP/HTML
 Le but est très simple, réussir à sortir du labyrinthe à l'aide des déplacements :
 
-- Gauche
-- Droite
 - Haut
 - Bas
+- Gauche
+- Droite
 
 ## to do list
 ### HTML/CSS
@@ -20,7 +20,7 @@ Le but est très simple, réussir à sortir du labyrinthe à l'aide des déplace
 - [x] Affichage pseudo
 
 ### PHP
-- [x] Liaison pseudo à la BDD
+- [x] Liaison de la BDD au site pour le pseudo
 - [ ] Bouton de déplacement fonctionnel
 - [ ] Système de victoire
 - [x] Système de rename
@@ -32,4 +32,7 @@ Le but est très simple, réussir à sortir du labyrinthe à l'aide des déplace
 
 #### Problème à régler
 
-Pseudo perdu une fois qu'on appui sur un bouton.
+Faire fonctionner les boutons de déplacement et garder le pseudo en mémoire aprés l'aapui sur un bouton.
+
+
+Je ne penses pas pouvoir aller plus loin dans cet exercice. Malheureusement mes capacités de dev m'arrêtent la, et puis je préférent de loin m'orienter en OPS.
