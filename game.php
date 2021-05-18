@@ -46,6 +46,7 @@
     // if ( is_null($user)) {
     //     $user = insertUser($mysqli, $_POST["pseudo"]);
     // }
+    
     echo"<p class='user'>Bienvenue ".($_SESSION['pseudo'])."</p>";
     ?>
 
