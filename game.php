@@ -99,79 +99,20 @@
     </form>
 
     <?php
-
-    function findPlayer($file)    {
-        $i = 0;
-        foreach ($file as $line) {
-            if ($key = array_search("2", $line)) {
-                return [$i, $key];
+        if (!empty($_POST)) {
+            if (isset($_POST["up"])) {
+                echo 'Deplacement vers le haut';
             }
-            $i++;
+            if (isset($_POST["left"])) {
+                echo 'Deplacement vers la gauche';
+            }
+            if (isset($_POST["right"])) {
+                echo 'Deplacement vers droite';
+            }
+            elseif (isset($_POST["down"])) {
+                echo 'Deplacement vers le bas';
+            } 
         }
-    }
-
-    function checkInputs($file) {
-        if (array_key_exists('up', $_POST)) {
-            up($file);
-        } 
-        else if (array_key_exists('down', $_POST)) {
-            down($file);
-        } 
-        else if (array_key_exists('left', $_POST)) {
-            left($file);
-        } 
-        else if (array_key_exists('right', $_POST)) {
-            right($file);
-        }
-    }
-
-    function up($file)    {
-        $key = findPlayer($file);
-        if ($file[$key[0] - 1][$key[1]] == "1") {
-            $file[$key[0]][$key[1]] = "1";
-            $file[$key[0] - 1][$key[1]] = "2";
-        }
-        // updateBDD($file);
-    }
-
-    function down($file)  {
-        $key = findPlayer($file);
-        if ($file[$key[0] + 1][$key[1]] == "4") {
-            $file[$key[0]][$key[1]] = "1";
-            $file[$key[0] + 1][$key[1]] = "2";
-            victory($file);
-        }
-        // updateBDD($file);
-    }
-
-    function left($file){
-        $key = findPlayer($file);
-        if ($file[$key[0]][$key[1] - 1] == "1") {
-            $file[$key[0]][$key[1]] = "1";
-            $file[$key[0]][$key[1] - 1] = "2";
-        }
-        // updateBDD($file);
-    }
-
-    function right($file){
-        $key = findPlayer($file);
-        if ($file[$key[0]][$key[1] + 1] == "1") {
-            $file[$key[0]][$key[1]] = "1";
-            $file[$key[0]][$key[1] + 1] = "2";
-        }
-        if ($file[$key[0]][$key[1] + 1] == "1") {
-            $file[$key[0]][$key[1]] = "1";
-            $file[$key[0]][$key[1] + 1] = "2";
-        }
-        // updateBDD($file);
-    }
-
-
-    function victory($file) {
-        echo "Victory";
-    }
-
-    checkInputs($file);
     ?>
 
     <!-- syteme restart -->
