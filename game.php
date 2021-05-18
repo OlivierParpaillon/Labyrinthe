@@ -8,7 +8,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-    <?php   //connection à la BDD
+    <?php   
+    
+    //Ancienne fonction pour afficher le pseudo depuis la BDD
+    
+    //connection à la BDD
     // $mysqli = new mysqli("localhost:3306", "phptest", "phptest", "labyrinthe");
     
 
