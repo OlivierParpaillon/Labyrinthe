@@ -23,17 +23,17 @@ if ($mysqli->connect_errno) {
     <meta charset="utf-8">
 
     <style>
-       body{
-           background-image: url(ressources/lab.jpg);
-       } 
+    body{
+        background-image: url(ressources/lab.jpg);
+    } 
 
-       .form{
-            margin: 0 auto;
-            padding: 150px;
-            width: 280px;
-            text-align: center;
-            text-justify: inter-word;
-       }
+    .form{
+        margin: 0 auto;
+        padding: 150px;
+        width: 280px;
+        text-align: center;
+        text-justify: inter-word;
+    }
 
     </style>
 
