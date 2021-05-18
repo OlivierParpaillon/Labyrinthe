@@ -25,6 +25,7 @@ Le but est très simple, réussir à sortir du labyrinthe à l'aide des déplace
 - [ ] Système de victoire
 - [x] Système de rename
 - [x] Système de restart
+- [x] Garder le pseudo en mémoire
 
 ### Bonus
 - [ ] Sauvegarde de la poistion du personnage
@@ -32,7 +33,7 @@ Le but est très simple, réussir à sortir du labyrinthe à l'aide des déplace
 
 #### Problème à régler
 
-Faire fonctionner les boutons de déplacement et garder le pseudo en mémoire aprés l'aapui sur un bouton.
+Faire déplacer le personnage dans le labyrinthe (???)
 
 
 Je ne penses pas pouvoir aller plus loin dans cet exercice. Malheureusement mes capacités de dev m'arrêtent la, et puis je préférent de loin m'orienter en OPS.

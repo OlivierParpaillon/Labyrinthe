@@ -1,45 +1,52 @@
+<?php   //affichage du pseudo en session
+    session_start();
+    if (isset($_POST['pseudo'])) {
+        $_SESSION['pseudo']=$_POST['pseudo'];
+      }
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
     <?php   //connection à la BDD
-    $mysqli = new mysqli("localhost:3306", "phptest", "phptest", "labyrinthe");
+    // $mysqli = new mysqli("localhost:3306", "phptest", "phptest", "labyrinthe");
     
 
-    if ($mysqli->connect_errno) {
-        printf("Échec de la connexion : %s\n", $mysqli->connect_error);
-        exit();
-    }
+    // if ($mysqli->connect_errno) {
+    //     printf("Échec de la connexion : %s\n", $mysqli->connect_error);
+    //     exit();
+    // }
 
-    function insertUser($mysqli, $user) {       //Creation du user
-        $sql = "INSERT INTO utilisateurs (nom) VALUES ('".$user."')";
+    // function insertUser($mysqli, $user) {       //Creation du user
+    //     $sql = "INSERT INTO utilisateurs (nom) VALUES ('".$user."')";
             
-        if ($mysqli->query($sql) === TRUE) {
-        return $user;
-        } else {
-        echo "Error: " . $sql . "<br>" . $mysqli->error;
-        }
-    }
+    //     if ($mysqli->query($sql) === TRUE) {
+    //     return $user;
+    //     } else {
+    //     echo "Error: " . $sql . "<br>" . $mysqli->error;
+    //     }
+    // }
 
-    function getUser($mysqli, $user) {      //recuperation du user pour l'affichage sur l'ecran
-        $data = [];
-        if ($result = $mysqli->query("SELECT * FROM utilisateurs WHERE nom = '".$user."'")) {
-            while ($row = $result->fetch_assoc()) {
-                $data[] = $row["nom"];
-            }
-            $result->close();
-            if (count($data) === 0) {
-                return NULL;
-            }else {
-                return $data[0];
-            }
-        }
-    }
+    // function getUser($mysqli, $user) {      //recuperation du user pour l'affichage sur l'ecran
+    //     $data = [];
+    //     if ($result = $mysqli->query("SELECT * FROM utilisateurs WHERE nom = '".$user."'")) {
+    //         while ($row = $result->fetch_assoc()) {
+    //             $data[] = $row["nom"];
+    //         }
+    //         $result->close();
+    //         if (count($data) === 0) {
+    //             return NULL;
+    //         }else {
+    //             return $data[0];
+    //         }
+    //     }
+    // }
 
-    $user = getUser($mysqli, $_POST["pseudo"]);
-    if ( is_null($user)) {
-        $user = insertUser($mysqli, $_POST["pseudo"]);
-    }
-    echo"<p class='user'>Bienvenue ".($user)."</p>";
+    // $user = getUser($mysqli, $_POST["pseudo"]);
+    // if ( is_null($user)) {
+    //     $user = insertUser($mysqli, $_POST["pseudo"]);
+    // }
+    echo"<p class='user'>Bienvenue ".($_SESSION['pseudo'])."</p>";
     ?>
 
 <head>
@@ -101,16 +108,16 @@
     <?php
         if (!empty($_POST)) {
             if (isset($_POST["up"])) {
-                echo 'Deplacement vers le haut';
+                echo '<p class="btn_up"> Deplacement vers le haut </p>';
             }
             if (isset($_POST["left"])) {
-                echo 'Deplacement vers la gauche';
+                echo '<p class="btn_left"> Deplacement vers la gauche </p>';
             }
             if (isset($_POST["right"])) {
-                echo 'Deplacement vers droite';
+                echo '<p class="btn_right"> Deplacement vers droite </p>';
             }
             elseif (isset($_POST["down"])) {
-                echo 'Deplacement vers le bas';
+                echo '<p class="btn_down"> Deplacement vers le bas </p>';
             } 
         }
     ?>

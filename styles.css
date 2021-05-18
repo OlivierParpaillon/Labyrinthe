@@ -50,6 +50,26 @@ img {
     margin-left: 99px;
 }
 
+.btn_up {
+    font-size: x-large;
+    text-align: center;
+}
+
+.btn_left {
+    font-size: x-large;
+    text-align: center;
+}
+
+.btn_right {
+    font-size: x-large;
+    text-align: center;
+}
+
+.btn_down {
+    font-size: x-large;
+    text-align: center;
+}
+
 
 /* bouton rename */
 
@@ -74,6 +94,5 @@ a {
 
 .user {
     font-size: x-large;
-    font-family: 'Bebas Neue', cursive;
     text-align: center;
 }
